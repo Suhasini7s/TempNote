@@ -1,0 +1,118 @@
+:root {
+    --background-color: grey;
+    --bs-primary-rgb: rgb(0, 0, 0);
+}
+
+body {
+    font-family: 'Poppins', 'Times New Roman', Times, serif;
+    background: linear-gradient(135deg, #b1c2e4, #dac7ec); /* Soft gradient background */
+    color: var(--bs-primary-rgb);
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Playfair Display', serif;
+    font-weight: 800; /* Bold weight for headings */
+}
+
+.container-fluid-custom {
+    max-width: 1600px; /* Limit the maximum width of the container */
+    margin: 0 auto; /* Center container */
+    padding: 20px; /* Add padding for spacing */
+}
+
+.btn {
+    background-color: #3498db; /* Primary button color */
+    color: white; /* Text color for button */
+    border: none; /* Remove border */
+    border-radius: 30px; /* Rounded corners */
+    padding: 10px 20px; /* Padding for button */
+    font-size: 1.2rem; /* Button text size */
+    transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transition */
+    text-decoration: none; /* Remove underline */
+}
+
+.btn:hover {
+    background-color: #2980b9; /* Darker color on hover */
+    transform: scale(1.05); /* Slightly enlarge button */
+}
+
+/* Button variations for outlined and primary styles */
+.btn-outline-primary {
+    --bs-btn-color: #022150;
+    --bs-btn-border-color: #0d6efd;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: var(--bs-primary-rgb);
+}
+
+.btn-primary {
+    --bs-btn-color: #fff;
+    --bs-btn-bg: var(--bs-primary-rgb);
+    --bs-btn-border-color: #0d6efd;
+    --bs-btn-hover-bg: #0b5ed7;
+}
+
+.pagination {
+    --bs-pagination-color: var(--bs-primary-rgb);
+    --bs-pagination-active-bg: var(--bs-primary-rgb);
+}
+
+.nav-link {
+    font-weight: bold; /* Make the text bold */
+}
+
+/* Home title styles with decorative stars */
+.home-title {
+    position: relative; /* Ensure the pseudo-element positions relative to this element */
+}
+
+.home-title::before,
+.home-title::after {
+    content: url('../images/stars.svg');
+    position: absolute;
+    z-index: -1; /* Place behind the text */
+}
+
+.home-title::before {
+    left: -50px; /* Adjust positioning as needed */
+    top: -30px;
+}
+
+.home-title::after {
+    right: -50px; /* Adjust positioning as needed */
+    bottom: -30px;
+}
+
+/* Dropdown button hover effects */
+.btn.btn-outline-primary.dropdown-toggle:hover {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transform: scale(1.1);
+    transition: all 0.3s ease-in-out;
+}
+
+.dropdown-item {
+    font-family: 'Times New Roman', Times, serif; /* Font for dropdown items */
+}
+
+/* Container for feature images */
+.feature-item {
+    overflow: hidden; /* Prevent background from showing */
+    position: relative; /* For absolute positioning of hover effect */
+}
+
+/* Adjusting image styles */
+.feature-item img {
+    width: 50%; /* Make images take the full width of the container */
+    height: auto; /* Allow height to adjust automatically based on width */
+    max-height: 200px; /* Optional: set a max height for uniformity */
+    object-fit: cover; /* Crop the image to fill the container while maintaining aspect ratio */
+    transition: transform 0.3s ease; /* Smooth transition for the hover effect */
+}
+
+/* Hover effect for images */
+.feature-item img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+    cursor: pointer; /* Change cursor to pointer */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4); /* Shadow effect */
+}
